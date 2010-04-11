@@ -10,5 +10,11 @@ $(document).ready(function() {
       $(this).val("");
       $(this).unbind("click");
     });
+    $(document).bind('keyup', function(e) {
+      if ($(e.target).is(':input')) { return; }
+      if (e.keyCode == '186') {
+        $('#query').val('').focus();
+      }
+    });
   }
 });
